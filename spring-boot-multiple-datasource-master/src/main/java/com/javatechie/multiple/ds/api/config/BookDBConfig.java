@@ -1,7 +1,5 @@
 package com.javatechie.multiple.ds.api.config;
 
-import java.util.HashMap;
-
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -32,13 +30,7 @@ public class BookDBConfig {
 	@Bean(name = "bookEntityManagerFactory")
 	public LocalContainerEntityManagerFactoryBean bookEntityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("bookDataSource") DataSource dataSource) {
-		HashMap<String, Object> properties = new HashMap<>();
-//		properties.put("hibernate.hbm2ddl.auto", "update");
-//		properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-//		properties.put("hibernate.naming.physical-strategy", "org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl");
-
 		return builder.dataSource(dataSource)
-//				.properties(properties)
 				.packages("com.javatechie.multiple.ds.api.model.book")
 				.persistenceUnit("Book")
 				.build();

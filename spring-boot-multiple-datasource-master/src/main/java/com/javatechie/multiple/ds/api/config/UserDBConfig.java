@@ -1,7 +1,5 @@
 package com.javatechie.multiple.ds.api.config;
 
-import java.util.HashMap;
-
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -34,13 +32,7 @@ public class UserDBConfig {
 	@Bean(name = "entityManagerFactory")
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("dataSource") DataSource dataSource) {
-		HashMap<String, Object> properties = new HashMap<>();
-//		properties.put("hibernate.hbm2ddl.auto", "update");
-//		properties.put("hibernate.naming.physical-strategy", "org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl");
-//		properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-
 		return builder.dataSource(dataSource)
-//				.properties(properties)
 				.packages("com.javatechie.multiple.ds.api.model.user")
 				.persistenceUnit("User")
 				.build();
