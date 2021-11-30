@@ -1,0 +1,8 @@
+com\javatechie\multiple\ds\api\SpringBootMultipleDsApplication.class
+com\javatechie\multiple\ds\api\user\repository\UserRepository.class
+com\javatechie\multiple\ds\api\config\UserDBConfig.class
+com\javatechie\multiple\ds\api\book\repository\BookRepository.class
+com\javatechie\multiple\ds\api\model\user\User.class
+com\javatechie\multiple\ds\api\config\BookDBConfig.class
+META-INF\spring-configuration-metadata.json
+com\javatechie\multiple\ds\api\model\book\Book.class
